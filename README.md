@@ -35,7 +35,7 @@ docker push masalinasgancedo/my-node
 
 - Create kubernetes **sample** namespace
 ```shell
-kubectl apply -f namespace-my-node.yaml
+kubectl apply -f ./deployment/namespace-my-node.yaml
 ```
 
 - Only In the case that the image registry where publish our image was private
@@ -59,7 +59,7 @@ Add **imagePullSecrets** attribute inside deployment artifact like this:
 
 - Create deployment in minikube
 ```shell
-kubectl apply -f deployment-my-node.yaml
+kubectl apply -f ./deployment/deployment-my-node.yaml
 ```
 
 - Expose deployment like NodePort service in minikube, create a port forward and load service from browser
