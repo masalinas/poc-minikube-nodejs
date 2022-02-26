@@ -1,7 +1,7 @@
 # Description
 PoC deploy a simple nodeJS service in minikube
 
-## Prepare environment
+## Prepare minikube environment
 - Start minikube
 ```shell
 minikube start
@@ -22,7 +22,7 @@ kubectl cluster-info
 minikube stop
 ```
 
-## Deploy servie on minikube
+## Deploy service on minikube
 - Create and Tag a service docker image from Dockerfile
 ```shell
 docker build -t masalinasgancedo/my-node .
