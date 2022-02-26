@@ -42,7 +42,7 @@ kubectl apply -f ./deployment/namespace-my-node.yaml
 
 Create Docker Hub credentials to pull docker hubs docker images
 ```shell
-kubectl create secret docker-registry my-dockerhub-credetials -n sample --docker-username=<DOCKER_HUB_USERNAME> --docker-password=<DOCKER_HUB_PASSWORD> --docker-email=<DOCKER_HUB_EMAIL>
+kubectl create secret docker-registry my-dockerhub-credentials -n sample --docker-username=<DOCKER_HUB_USERNAME> --docker-password=<DOCKER_HUB_PASSWORD> --docker-email=<DOCKER_HUB_EMAIL>
 ```
 
 Add **imagePullSecrets** attribute inside deployment artifact like this:
@@ -54,7 +54,7 @@ Add **imagePullSecrets** attribute inside deployment artifact like this:
         ports:
         - containerPort: 8080
       imagePullSecrets:
-      - name: my-dockerhub-credetials
+      - name: my-dockerhub-credentials
 ```
 
 - Create deployment in minikube
