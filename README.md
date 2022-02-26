@@ -1,7 +1,28 @@
-## Description
+# Description
 PoC deploy a simple nodeJS service in minikube
 
-# Steps to follow
+## Prepare environment
+- Start minikube
+```shell
+minikube start
+```
+
+- Start minikube Dashboard
+```shell
+minikube dashboard
+```
+
+- Check minikube connection
+```shell
+kubectl cluster-info
+```
+
+- Stop minikube
+```shell
+minikube stop
+```
+
+## Deploy servie on minikube
 - Create and Tag a service docker image from Dockerfile
 ```shell
 docker build -t masalinasgancedo/my-node .
