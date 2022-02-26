@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-node-deployment
+  namespace: sample
+  labels:
+    app: my-node
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: my-node
+  template:
+    metadata:
+      labels:
+        app: my-node
+    spec:
+      containers:
+      - name: my-node
+        image: masalinasgancedo/my-node
+        ports:
+        - containerPort: 8080
